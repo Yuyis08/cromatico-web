@@ -54,6 +54,7 @@ body::after {
 .titulo {
     padding-left: 10px;
     color: #54136a;
+    
 }
 
 header {
@@ -367,28 +368,32 @@ header:hover {
 @media (max-width: 768px) {
 
     body {
-        height: auto;
         min-height: 100vh;
-        padding: 10px 30px;
+        padding: 10px 20px;
         gap: 20px;
     }
 
+    /* HEADER siempre visible */
     header {
-        position: relative; /* para que menu-toggle se posicione relativo al header */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap; /* permite que el menú baje */
-        padding: 0 10px;
-        top: 0;
+        padding: 0 15px;
         z-index: 1000;
+        background-color: rgba(255,255,255,0.6);
+        backdrop-filter: blur(6px);
     }
 
+    /* TOGGLE menú a la derecha */
     .menu-toggle {
         display: block;
         position: absolute;
         top: 50%;
-        right: 80px; /* más cerca del borde */
+        right: 50px;
         transform: translateY(-50%);
         font-size: 28px;
         cursor: pointer;
@@ -396,23 +401,19 @@ header:hover {
         z-index: 1100;
     }
 
+    /* Menú desplegable desde la derecha */
     .menu {
         position: absolute;
         top: 60px;
-        left: 0; /* ahora empieza desde la izquierda */
-        background: linear-gradient(
-            135deg,
-            #b4aeaeab,
-            #7b2cbf
-        );
+        right: 0; /* desplegar desde la derecha */
         width: 100%;
+        background: linear-gradient(135deg, #b4aeaeab, #7b2cbf);
         display: flex;
         flex-direction: column;
-
-        /* Animación */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
+        z-index: 1050;
     }
 
     .menu.active {
@@ -424,6 +425,7 @@ header:hover {
         border-bottom: 0.5px solid rgba(157, 35, 223, 0.5);
         text-align: center;
         color: #ffffff;
+        font-weight: 600;
     }
 
     .menu a:hover {
@@ -431,11 +433,12 @@ header:hover {
         transform: scale(1.05);
     }
 
+    /* HERO */
     .hero {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 80px; /* espacio para header fijo */
     }
 
     .hero-left, .hero-right {
@@ -448,15 +451,11 @@ header:hover {
 
     .hero-image {
         margin-top: 30px;
+        max-width: 90%;
     }
 
     .hero-logo {
         max-width: 400px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
-
-    .lado-izquierdo, .lado-derecho {
-        width: 100%;
-    }
-
 }
