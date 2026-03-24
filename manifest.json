@@ -1,0 +1,21 @@
+{
+  "name": "Imprenta Cromático",
+  "short_name": "Cromático",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#9D23DF",
+  "theme_color": "#6a0dad",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/resize-icono/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/resize-icono/icono-192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
