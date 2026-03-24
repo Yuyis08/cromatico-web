@@ -388,7 +388,7 @@ header:hover {
         display: block;
         position: absolute;
         top: 50%;
-        right: 10px; /* más cerca del borde */
+        right: 80px; /* más cerca del borde */
         transform: translateY(-50%);
         font-size: 28px;
         cursor: pointer;
