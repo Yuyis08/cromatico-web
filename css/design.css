@@ -399,11 +399,17 @@ header:hover {
     .menu {
         position: absolute;
         top: 60px;
-        right: 0;
+        left: 0; /* ahora empieza desde la izquierda */
+        background: linear-gradient(
+            135deg,
+            #b4aeaeab,
+            #7b2cbf
+        );
         width: 100%;
-        background: linear-gradient(135deg, #b4aeaeab, #7b2cbf);
         display: flex;
         flex-direction: column;
+
+        /* Animación */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
