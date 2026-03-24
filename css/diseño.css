@@ -8,7 +8,7 @@
 /* FONDO */
 body {
     min-height: 100vh;
-    background-image: url("/fondo-rayas.jpg");
+    background-image: url("../fondo-rayas.jpg");
     background-size: cover;
     background-position: center;
     color: white;

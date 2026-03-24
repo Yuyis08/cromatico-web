@@ -80,7 +80,7 @@ header:hover {
 
 body {
     font-family: 'nueva', CreatoDisplay-Light;
-    background-image: url(/fondo-rayas.jpg);
+    background-image: url(../fondo-rayas.jpg);
     height: 105vh;
     background-size: cover;
     background-position: center;
@@ -91,7 +91,7 @@ body {
 
 @font-face {
     font-family: 'nueva';
-    src: url(/fonts/CreatoDisplay-Light.otf) format('woff2');
+    src: url(../fonts/CreatoDisplay-Light.otf) format('woff2');
     font-weight: normal;
     font-style: normal;
 }

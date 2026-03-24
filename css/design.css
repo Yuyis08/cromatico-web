@@ -1,13 +1,13 @@
 /* FUENTE */
 @font-face {
     font-family: 'nueva';
-    src: url(/fonts/CreatoDisplay-Light.otf);
+    src: url(../fonts/CreatoDisplay-Light.otf);
 }
 
 body {
     margin: 0;
     font-family: 'nueva', Arial, sans-serif;
-    background-image: url(/fondo-rayas.jpg);
+    background-image: url(../fondo-rayas.jpg);
     background-size: cover;
     background-position: center;
     color: black;

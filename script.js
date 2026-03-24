@@ -47,17 +47,17 @@ const categorias = {
       {
         nombre: "Tarjetas de presentación",
         descripcion: "Impresión en cartulina, diferentes acabados.",
-        imagen: "/img/tarjeta_presentacion.jpg"
+        imagen: "./img/tarjeta_presentacion.jpg"
       },
       {
         nombre: "Invitaciones",
         descripcion: "Digitales o impresas para todo tipo de evento. Desde $7.",
-        imagen: "/img/invitacion.png"
+        imagen: "./img/invitacion.png"
       },
       {
         nombre: "Calendarios",
         descripcion: "Personalizados con tu marca.",
-        imagen: "/img/calendario.png"
+        imagen: "./img/calendario.png"
       }
     ]
   },
@@ -70,17 +70,17 @@ const categorias = {
       {
         nombre: "Playeras",
         descripcion: "DTF, vinil textil o sublimación. Desde $150",
-        imagen: "/img/playera.png"
+        imagen: "./img/playera.png"
       },
       {
         nombre: "Sudaderas",
         descripcion: "Ideales para instituciones, equipos y para ti.",
-        imagen: "/img/sudadera.png"
+        imagen: "./img/sudadera.png"
       },
       {
         nombre: "Gorras",
         descripcion: "Personalizadas con vinil o DTF.",
-        imagen: "/img/gorra.png"
+        imagen: "./img/gorra.png"
       }
     ]
   },
@@ -93,17 +93,17 @@ const categorias = {
       {
         nombre: "Tazas",
         descripcion: "Servicio personalizado.",
-        imagen: "/img/tazas.png"
+        imagen: "./img/tazas.png"
       },
       {
         nombre: "Termos",
         descripcion: "Personalización duradera.",
-        imagen: "/img/termos.png"
+        imagen: "./img/termos.png"
       },
       {
         nombre: "Pines",
         descripcion: "Ideales para eventos o marcas.",
-        imagen: "/img/pines.png"
+        imagen: "./img/pines.png"
       }
     ]
   },
@@ -117,12 +117,12 @@ const categorias = {
       {
         nombre: "Lonas",
         descripcion: "Impresas a gran formato con diseño.",
-        imagen: "/img/lonas.png"
+        imagen: "./img/lonas.png"
       },
       {
         nombre: "Vinil impreso",
         descripcion: "Microperforado y estático.",
-        imagen: "/img/vinil.png"
+        imagen: "./img/vinil.png"
       }
     ]
   },
@@ -135,12 +135,12 @@ const categorias = {
       {
         nombre: "Paquete graduación",
         descripcion: "Carpeta, pin e invitación.",
-        imagen: "/img/paquete.png"
+        imagen: "./img/paquete.png"
       },
       {
         nombre: "Sellos personalizados",
         descripcion: "Ideales para papelería corporativa.",
-        imagen: "/img/sellos.jpg"
+        imagen: "./img/sellos.jpg"
       }
     ]
   }
