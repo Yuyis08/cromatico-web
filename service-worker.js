@@ -49,7 +49,7 @@ self.addEventListener("fetch", event => {
       if (response) return response;
 
       return fetch(event.request).then(networkResponse => {
-        return caches.open("cromatico-v1").then(cache => {
+        return caches.open("cromatico-v4").then(cache => {
           cache.put(event.request, networkResponse.clone());
           return networkResponse;
         });
