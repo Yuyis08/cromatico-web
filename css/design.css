@@ -417,7 +417,7 @@ header:hover {
     display: block;
     position: absolute; /* mejor que fixed */
     top: 50%;           /* centrado vertical dentro del header */
-    right: 20px;        /* a la derecha */
+    right: 30px;        /* a la derecha */
     transform: translateY(-50%); /* centrado exacto */
     font-size: 28px;
     cursor: pointer;
@@ -487,5 +487,13 @@ header:hover {
         max-width: 400px;
         margin-top: 100px;
     }
+    header {
+    position: relative; /* para que menu-toggle se posicione relativo al header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
 }
 
