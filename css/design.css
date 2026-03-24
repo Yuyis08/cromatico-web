@@ -413,11 +413,17 @@ header:hover {
 
 
     
-  .menu-toggle {
+.menu-toggle {
     display: block;
-    padding-right: 30px;
-  }
-
+    position: absolute; /* mejor que fixed */
+    top: 50%;           /* centrado vertical dentro del header */
+    right: 20px;        /* a la derecha */
+    transform: translateY(-50%); /* centrado exacto */
+    font-size: 28px;
+    cursor: pointer;
+    color: #54136a;
+    z-index: 1100;      /* por encima del menú y el logo */
+}
   header {
     flex-wrap: wrap; /* permite que el menú baje */
     top: 0;
