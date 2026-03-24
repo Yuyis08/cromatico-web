@@ -1,22 +1,22 @@
-const CACHE_NAME = "cromatico-v3";
+const CACHE_NAME = "cromatico-v4";
 
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./about.html",
-  "./contacto.html",
-  "./catalogo.html",
+  "/",
+  "/index.html",
+  "/about.html",
+  "/contacto.html",
+  "/catalogo.html",
 
-  "./css/design.css",
-  "./css/diseño.css",
+  "/css/design.css",
+  "/css/diseño.css",
   "./css/contacto.css",
-  "./css/styles.css",
+  "/css/styles.css",
 
-  "./script.js",
-  "./manifest.json",
+  "/script.js",
+  "/manifest.json",
 
-  "./resize-icono/icono-192.png",
-  "./resize-icono/icono-512.png"
+  "/resize-icono/icono-192.png",
+  "/resize-icono/icono-512.png"
 ];
 
 // INSTALAR
