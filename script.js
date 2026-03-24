@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* --- CARRUSEL --- */
+  /* --------------------- CARRUSEL (index.html) --------------------- */
   const carouselElements = document.querySelectorAll('.carousel');
   if (carouselElements.length > 0) {
     carouselElements.forEach(carousel => {
@@ -40,18 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* --- MENÚ DESPLEGABLE --- */
-  const menu = document.querySelector(".menu");
-  const toggle = document.querySelector(".menu-toggle");
-  if (menu && toggle) {
-    function toggleMenu() {
-      menu.classList.toggle("active");
-      toggle.textContent = menu.classList.contains("active") ? "✕" : "☰";
-    }
-    window.toggleMenu = toggleMenu; // Exponer global para onclick
-  }
+  /* --------------------- MENÚ DESPLEGABLE --------------------- */
+  window.toggleMenu = function() {
+    const menu = document.querySelector(".menu");
+    const toggle = document.querySelector(".menu-toggle");
+    if (!menu || !toggle) return;
 
-  /* --- MODALES EN CATALOGO --- */
+    menu.classList.toggle("active");
+    toggle.textContent = menu.classList.contains("active") ? "✕" : "☰";
+  };
+
+  /* --------------------- MODALES EN CATALOGO (catalogo.html) --------------------- */
   const modal = document.getElementById("modal");
   if (modal) {
     const title = document.getElementById("modal-title");
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       papeleria: {
         titulo: "Papelería e impresos",
         descripcion: "Recetas, notas, boletos, tarjetas de presentación y más. | Tabloide 12x18''",
-        badge: "Papelería",
         productos: [
           { nombre: "Tarjetas de presentación", descripcion: "Impresión en cartulina, diferentes acabados.", imagen: "/img/tarjeta_presentacion.jpg" },
           { nombre: "Invitaciones", descripcion: "Digitales o impresas para todo tipo de evento. Desde $7.", imagen: "/img/invitacion.png" },
@@ -72,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
       textiles: {
         titulo: "Textiles personalizados",
         descripcion: "Sublimación, serigrafía, vinil textil y DTF. Para más información, da clic en Atención personalizada.",
-        badge: "Textiles",
         productos: [
           { nombre: "Playeras", descripcion: "DTF, vinil textil o sublimación. Desde $150", imagen: "/img/playera.png" },
           { nombre: "Sudaderas", descripcion: "Ideales para instituciones, equipos y para ti.", imagen: "/img/sudadera.png" },
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       productos: {
         titulo: "Productos personalizados",
         descripcion: "Artículos con sublimación y DTF UV",
-        badge: "Personalizado",
         productos: [
           { nombre: "Tazas", descripcion: "Servicio personalizado.", imagen: "/img/tazas.png" },
           { nombre: "Termos", descripcion: "Personalización duradera.", imagen: "/img/termos.png" },
@@ -92,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
       gran_formato: {
         titulo: "Gran formato y publicidad",
         descripcion: "Material de larga duración. | Lona por metro -> $160 m² | Vinil por metro lineal -> $250 m l",
-        badge: "Gran formato",
         productos: [
           { nombre: "Lonas", descripcion: "Impresas a gran formato con diseño.", imagen: "/img/lonas.png" },
           { nombre: "Vinil impreso", descripcion: "Microperforado y estático.", imagen: "/img/vinil.png" }
@@ -101,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
       paquetes: {
         titulo: "Paquetes especiales",
         descripcion: "Servicios completos para eventos.",
-        badge: "Especial",
         productos: [
           { nombre: "Paquete graduación", descripcion: "Carpeta, pin e invitación.", imagen: "/img/paquete.png" },
           { nombre: "Sellos personalizados", descripcion: "Ideales para papelería corporativa.", imagen: "/img/sellos.jpg" }
@@ -109,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    function abrirModal(categoria) {
+    window.abrirModal = function(categoria) {
       const cat = categorias[categoria];
       if (!cat) return;
 
@@ -130,17 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       modal.style.display = "flex";
-    }
+    };
 
-    function cerrarModal() {
+    window.cerrarModal = function() {
       modal.style.display = "none";
-    }
-
-    window.abrirModal = abrirModal;
-    window.cerrarModal = cerrarModal;
+    };
   }
 
-  /* --- SERVICE WORKER --- */
+  /* --------------------- SERVICE WORKER --------------------- */
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
       .then(() => console.log("Service Worker registrado"))
