@@ -415,6 +415,7 @@ header:hover {
     
   .menu-toggle {
     display: block;
+    position: fixed !important;
     padding-right: 30px;
   }
 

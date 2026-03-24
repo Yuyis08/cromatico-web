@@ -523,7 +523,7 @@ header:hover {
 
   .menu-toggle {
     display: block !important;
-    position: fixed !important;   /* 🔥 más seguro que absolute */
+    position: fixed !important;  
     top: 15px;
     right: 20px;
     font-size: 30px;
