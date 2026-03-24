@@ -1,27 +1,40 @@
-const CACHE_NAME = "mi-pwa-cache-v1";
+const CACHE_NAME = "cromatico-v1";
+
 const urlsToCache = [
   "./",
   "./index.html",
-  "./styles.css",
+  "./about.html",
+  "./contacto.html",
+  "./catalogo.html",
+
+  "./css/design.css",
+  "./css/diseño.css",
+  "./css/contacto.css",
+  "./css/styles.css",
+
   "./script.js",
-  "./cromatico.jpg",
-  "./offline.html"
+  "./manifest.json",
+
+  "./resize-icono/icono-192.png",
+  "./resize-icono/icono-512.png"
 ];
 
-// Instalar
+// INSTALAR
 self.addEventListener("install", event => {
+  self.skipWaiting();
+
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
 });
 
-// Activar
+// ACTIVAR
 self.addEventListener("activate", event => {
-  console.log("Service Worker activado");
+  event.waitUntil(self.clients.claim());
 });
 
-// Fetch (para modo offline)
+// FETCH
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
