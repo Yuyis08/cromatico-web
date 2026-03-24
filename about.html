@@ -8,7 +8,7 @@
     <link rel="icon" href="/negro.png">
 
 <!--MANIFIESTO-->
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#6a0dad">
 
     <!-- Iconos -->
@@ -98,7 +98,7 @@ function toggleMenu() {
 
 //REGISTRO DE SERVICE WORKER
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js')
+  navigator.serviceWorker.register('./service-worker.js')
     .then(() => console.log("Service Worker registrado"))
     .catch(error => console.log("Error:", error));
 }

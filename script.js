@@ -194,7 +194,7 @@ function toggleMenu() {
 
 //REGISTRO DE SERVICE WORKER
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js')
+  navigator.serviceWorker.register('./service-worker.js')
     .then(() => console.log("Service Worker registrado"))
     .catch(error => console.log("Error:", error));
 }
