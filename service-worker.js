@@ -1,4 +1,4 @@
-const CACHE_NAME = "cromatico-v4";
+const CACHE_NAME = "cromatico-v5";
 
 const urlsToCache = [
   "/",
@@ -49,7 +49,7 @@ self.addEventListener("fetch", event => {
       if (response) return response;
 
       return fetch(event.request).then(networkResponse => {
-        return caches.open("cromatico-v4").then(cache => {
+        return caches.open("cromatico-v5").then(cache => {
           cache.put(event.request, networkResponse.clone());
           return networkResponse;
         });
