@@ -1,3 +1,6 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+
 /*CARRUSEL*/
 document.querySelectorAll('.carousel').forEach(carousel => {
   const images = carousel.querySelectorAll('.carousel-img');
@@ -199,18 +202,4 @@ if ('serviceWorker' in navigator) {
     .catch(error => console.log("Error:", error));
 }
 
-//MAYOR VELOCIDAD DE RECARGA
-self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      if (response) return response;
-
-      return fetch(event.request).then(networkResponse => {
-        return caches.open("cromatico-v1").then(cache => {
-          cache.put(event.request, networkResponse.clone());
-          return networkResponse;
-        });
-      });
-    })
-  );
 });

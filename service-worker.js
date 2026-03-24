@@ -1,4 +1,4 @@
-const CACHE_NAME = "cromatico-v2";
+const CACHE_NAME = "cromatico-v3";
 
 const urlsToCache = [
   "./",
@@ -39,5 +39,21 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
       .then(response => response || fetch(event.request))
+  );
+});
+
+//MAYOR VELOCIDAD DE RECARGA
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      if (response) return response;
+
+      return fetch(event.request).then(networkResponse => {
+        return caches.open("cromatico-v1").then(cache => {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+      });
+    })
   );
 });
