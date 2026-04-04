@@ -1,8 +1,5 @@
 /* FUENTE */
-@font-face {
-    font-family: 'nueva';
-    src: url(../fonts/CreatoDisplay-Light.otf);
-}
+
 
 body {
     margin: 0;
@@ -39,6 +36,17 @@ body::after {
   z-index: -1;
 }
 
+@font-face {
+    font-family: 'FuenteImprenta'; 
+    src: url('/fonts/Simply\ Olive\ DEMO.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif; /* Fuentes estándar para texto largo */
+}
+
 @keyframes brillo {
   0% { transform: translateX(-100%); }
   50% { transform: translateX(100%); }
@@ -54,7 +62,7 @@ body::after {
 .titulo {
     padding-left: 10px;
     color: #54136a;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
 }
 
 header {
@@ -87,6 +95,7 @@ header:hover {
 }
 
 .menu a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
     text-decoration: none;
     color: #54136a;
     margin-right: 40px;
@@ -114,18 +123,18 @@ header:hover {
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    font-family: 'FuenteImprenta', sans-serif; /* Con fuente de respaldo */
+    font-size: 62px;
+    letter-spacing: 0.15em;
 
     background: linear-gradient(
         120deg,
-        #ff0080,
-        #7928ca,
-        #d4a6f5,
-        #32208d,
-        #3f62ff
+        #65DF23,
+        #5cf873,
+        #f5f5a6,
+       	#C3DF23,
+        #DF9C23
     );
 
     background-size: 400% 400%;
@@ -137,7 +146,7 @@ header:hover {
 
     text-shadow:
         0 0 15px rgba(199, 125, 255, 0.35),
-        0 0 30px rgba(121, 40, 202, 0.25);
+        0 0 30px rgba(121, 40, 202, 0.25)
 }
 
 
@@ -172,6 +181,7 @@ header:hover {
     font-weight: bold;
     transition: 0.3s ease;
     box-shadow: 0 10px 25px rgba(150, 96, 169, 0.35);
+    font-family: 'MiFuenteImprenta', sans-serif;
 }
 
 .hero-btn:hover {

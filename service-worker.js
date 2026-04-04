@@ -1,4 +1,4 @@
-const CACHE_NAME = "cromatico-v5";
+const CACHE_NAME = "cromatico-v6";
 
 const urlsToCache = [
   "/",

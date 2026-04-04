@@ -5,6 +5,13 @@
     font-family:'Poppins', sans-serif;
 }
 
+@font-face {
+    font-family: 'FuenteImprenta'; 
+    src: url('/fonts/Simply\ Olive\ DEMO.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     background: radial-gradient(circle at top left, #7e24a5, #0d0f2b 70%);
     color:white;
@@ -49,6 +56,7 @@ header:hover {
 
 .titulo {
     color: #54136a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .menu a {
@@ -57,6 +65,9 @@ header:hover {
     color: #54136a;
     font-weight: lighter;
     transition: color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
 }
 
 .menu a:hover {
@@ -64,7 +75,18 @@ header:hover {
     font-weight: bold;
 }
 
+.contacto-info h1 {
+    font-family: 'FuenteImprenta', sans-serif;
+    letter-spacing: 0.25em;
+}
 
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#tipo, #mensaje, #fecha {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .contacto{
     min-height:100vh;
@@ -155,6 +177,7 @@ button{
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button:hover{
@@ -304,6 +327,7 @@ button:hover{
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 
     /* Animación */
     max-height: 0;
@@ -326,5 +350,23 @@ button:hover{
   .menu.active {
     max-height: 300px; /* se despliega */
   }
+.contacto-form {
+    width: 100%;
+    max-width: 400px; /* Evita que el formulario sea gigante en tablets */
+  }
 
+  /* 6. Centramos los elementos internos del formulario */
+  #formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #formulario select, 
+  #formulario textarea, 
+  #formulario input, 
+  #formulario button {
+    width: 100%; /* Que ocupen todo el ancho del contenedor centrado */
+    box-sizing: border-box;
+  }
 }

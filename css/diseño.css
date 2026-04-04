@@ -5,6 +5,13 @@
     font-family: Arial, sans-serif;
 }
 
+@font-face {
+    font-family: 'FuenteImprenta'; 
+    src: url('/fonts/Simply\ Olive\ DEMO.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* FONDO */
 body {
     min-height: 100vh;
@@ -76,14 +83,18 @@ header:hover {
 
 .titulo {
     color: #54136a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
 }
 
 .menu a {
     margin-left: 25px;
     text-decoration: none;
     color: #54136a;
-    font-weight: lighter;
+    font-weight: bolder;
     transition: color 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
 }
 
 .menu a:hover {
@@ -340,6 +351,7 @@ header:hover {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .eslogan {
@@ -365,6 +377,17 @@ header:hover {
     animation: mostrarTexto 1s ease forwards;
     animation-delay: 1s;
     opacity: 0;
+    font-family: 'FuenteImprenta', sans-serif;
+    letter-spacing: 12px;
+}
+
+.valores-hero p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.valores-hero h3 {
+    font-family: 'FuenteImprenta', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.15em;
 }
 
 /* BARRAS */
